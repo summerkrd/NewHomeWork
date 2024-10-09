@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public enum ReactAction
+public enum AlertAction
 {
     RunAwayFromPlayer,
     RunToPlayer,
