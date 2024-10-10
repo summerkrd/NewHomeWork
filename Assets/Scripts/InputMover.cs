@@ -13,10 +13,10 @@ public class InputMover : MonoBehaviour
 
     private void Update()
     {
-        _axisX = Input.GetAxis(_horizontallInput);
-        _axisY = Input.GetAxis(_verticalInput);
+        _axisX = Input.GetAxisRaw(_horizontallInput);
+        _axisY = Input.GetAxisRaw(_verticalInput);
 
-        Vector3 moveDirection = new Vector3(_axisX, 0f, _axisY);        
+        Vector3 moveDirection = new Vector3(_axisX, 0f, _axisY).normalized;        
         transform.position += moveDirection * Time.deltaTime * _moveSpeed;
 
         RotateBody(moveDirection);
